@@ -1,0 +1,37 @@
+运行配置：
+导入项目，选择pom.xml文件（这是个maven项目）
+导入后会自动配置好相关依赖
+创建数据库：
+先登陆mysql
+DROP DATABASE IF EXISTS tmall_ssm;
+CREATE DATABASE tmall_ssm DEFAULT CHARACTER SET utf8;
+
+因为数据库过大，用mysql command line client或者navicat导入数据库都会出错，只能在cmd中导入：
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -pzzy971129 --default-character-set=utf8 tmall_ssm < E:\ProgramWork\tmall_ssm.sql
+注意更改mysql的位置，用户名和密码（-p和密码之间没有空格），sql文件的位置
+
+
+在resources文件夹下的jdbc.properties中修改用户名和密码
+在generatorConfig.xml修改用户名和密码
+然后正常配置tomcat和连接数据库就可以运行了
+如果用的老版本mysql可能有问题，可在pom.xml中修改版本信息再重新导入项目
+
+
+文件作用：
+pojo是实体类，我们操作的数据对象
+对应service类为对实体类操作的接口
+service类由serviceImpl类通过mapper实现，业务逻辑在serviceImpl类中实现
+mapper为进行底层数据库操作的接口，通过ApplicationContext.xml中的配置信息与mapper文件夹下的xml文件关联
+mapper的xml文件将mapper中的接口用SQL语句实现
+controller用于联系前后端，调用service类实现功能
+
+webapp文件夹下的都是前端内容
+jsp是显示的前端页面
+admin显示的是后台管理页面
+fore显示的是前台商城页面
+include是一些页面模板
+index.jsp是一开始的初始页面
+
+当访问如http://localhost:8080/forehome时
+springMVC将请求映射到ForeController的home方法（由 @RequestMapping("forehome")标记）
+controller的对应方法调用各种service完成操作，return的连接转到对应的jsp页面
