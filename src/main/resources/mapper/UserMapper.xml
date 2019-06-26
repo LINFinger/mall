@@ -98,6 +98,15 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <update id="resetPassword" parameterType="com.how2java.tmall.pojo.User">
+    update user
+    <set>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where name = #{name,jdbcType=VARCHAR}
+  </update>
   <update id="updateByPrimaryKey" parameterType="com.how2java.tmall.pojo.User">
     update user
     set name = #{name,jdbcType=VARCHAR},

@@ -8,6 +8,7 @@ public interface UserService {
     void add(User c);
     void delete(int id);
     void update(User c);
+    void reset(User c);
     User get(int id);
     List<User> list();
     boolean isExist(String name);

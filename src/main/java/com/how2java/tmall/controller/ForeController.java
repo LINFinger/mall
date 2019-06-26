@@ -96,6 +96,28 @@ public class ForeController {
 	}
 
 	/**
+	 * 重置密码功能
+	 *
+	 * @param model
+	 * @param user
+	 * @return
+	 */
+	@RequestMapping("passwordRegister")
+	public String resetPassword(Model model, User user) {
+		String name = user.getName();
+		name = HtmlUtils.htmlEscape(name);
+		if (!userService.isExist(name)) {
+			// 如果用户不存在，那么当然不能找回密码
+			String m = "用户名不存在";
+			model.addAttribute("msg", m);
+			return "fore/resetPassword";
+		}
+		String password = user.getPassword();
+		user.setPassword(password);
+		userService.reset(user);//更新用户密码
+		return "redirect:resetSuccess";
+	}
+	/**
 	 * 用户登录
 	 * 
 	 * @param model

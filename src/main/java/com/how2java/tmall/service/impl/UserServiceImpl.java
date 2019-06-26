@@ -34,6 +34,11 @@ public class UserServiceImpl implements UserService {
     public User get(int id) {
         return userMapper.selectByPrimaryKey(id);
     }
+
+    @Override
+    public void reset(User c) {
+        userMapper.resetPassword(c);
+    }
  
     public List<User> list(){
         UserExample example =new UserExample();
