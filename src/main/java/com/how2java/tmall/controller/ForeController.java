@@ -207,6 +207,28 @@ public class ForeController {
 	}
 
 	/**
+	 * 检验是否加入购物车，并返回信息给jsp ajax函数
+	 *
+	 * @param session
+	 * @return
+	 */
+	@RequestMapping("cartCheck")
+	@ResponseBody
+	public boolean checkCart(int pid,HttpSession session) {
+		Product p = productService.get(pid);
+		User user =(User)  session.getAttribute("user");
+
+		List<OrderItem> ois = orderItemService.listByUser(user.getId());
+		for (OrderItem oi : ois) {
+			if(oi.getProduct().getId().intValue()==p.getId().intValue()){
+				return true;
+			}
+		}
+		return false;
+	}
+
+
+	/**
 	 * 检查登录密码是否正确，并返回信息给jsp页面ajax函数
 	 * 
 	 * @param name
