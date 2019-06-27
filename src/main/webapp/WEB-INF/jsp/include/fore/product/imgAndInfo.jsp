@@ -8,15 +8,11 @@
 
     $(function(){
         var pid = ${p.id};
-        window.onload=function(){
-            if(window.name!="hasLoad"){
-                location.reload();
-                window.name="hasLoad";
+        window.onpageshow = function(event) {
+            if (event.persisted || (window.performance && window.performance.navigation.type == 2)) {
+            window.location.reload()
             }
-            else{
-                window.name="";
-            }
-        }
+        };
         $(function(){
             var cartCheck = "cartCheck";
             $.get(

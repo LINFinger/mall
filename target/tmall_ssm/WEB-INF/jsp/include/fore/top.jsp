@@ -5,6 +5,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 		 pageEncoding="UTF-8" isELIgnored="false"%>
 
+<script>
+    window.onpageshow = function(event) {
+        if (event.persisted || (window.performance && window.performance.navigation.type == 2)) {
+            window.location.reload()
+        }
+    };
+</script>
 <nav class="top ">
 	<a href="${contextPath }">
 		<span style="color:#C40000;margin:0px" class=" glyphicon glyphicon-home redColor"></span>
