@@ -18,5 +18,6 @@
 <p>${user.getPhone()}</p>
 <p>${user.getReceiver()}</p>
 <p>${user.getPostal()}</p>
+<p>${user.getTrueName()}</p>
 </body>
 </html>

@@ -36,7 +36,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id,name,password,address,phone,receiver,postal,sex
+    id,name,password,address,phone,receiver,postal,sex,trueName
   </sql>
   <select id="selectByExample" parameterType="com.how2java.tmall.pojo.UserExample" resultMap="BaseResultMap">
     select

@@ -5,6 +5,16 @@ public class User {
 
     private String name;
 
+    public String getTrueName() {
+        return trueName;
+    }
+
+    public void setTrueName(String trueName) {
+        this.trueName = trueName;
+    }
+
+    private String trueName;
+
     private String password;
 
     private String address;
