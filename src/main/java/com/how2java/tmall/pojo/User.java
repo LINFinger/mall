@@ -5,13 +5,7 @@ public class User {
 
     private String name;
 
-    public String getTrueName() {
-        return trueName;
-    }
-
-    public void setTrueName(String trueName) {
-        this.trueName = trueName;
-    }
+    private String email;
 
     private String trueName;
 
@@ -22,6 +16,22 @@ public class User {
     private String phone;
 
     private String receiver;
+
+    public String getTrueName() {
+        return trueName;
+    }
+
+    public void setTrueName(String trueName) {
+        this.trueName = trueName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getSex() {
         return sex;

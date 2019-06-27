@@ -8,8 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="549ee5ab-618b-4645-8437-b501a20337da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fore/accountPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fore/accountPage.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,16 +32,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            <state relative-caret-position="61">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
               <folding>
-                <element signature="e#137#138#0" expanded="true" />
-                <element signature="e#168#169#0" expanded="true" />
-                <element signature="e#216#217#0" expanded="true" />
-                <element signature="e#256#257#0" expanded="true" />
+                <element signature="e#309#310#0" expanded="true" />
+                <element signature="e#340#341#0" expanded="true" />
+                <element signature="e#388#389#0" expanded="true" />
+                <element signature="e#428#429#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#488#489#0" expanded="true" />
+                <element signature="e#530#531#0" expanded="true" />
+                <element signature="e#564#565#0" expanded="true" />
                 <element signature="e#248#249#0" expanded="true" />
                 <element signature="e#274#275#0" expanded="true" />
                 <element signature="e#312#313#0" expanded="true" />
@@ -64,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accountPage.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="accountPage.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fore/accountPage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state relative-caret-position="221">
+              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -165,8 +167,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/include/fore/top.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/how2java/tmall/controller/ForeController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/User.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fore/accountPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/User.java" />
       </list>
     </option>
   </component>
@@ -220,7 +222,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="444" />
     <option name="width" value="981" />
     <option name="height" value="1032" />
@@ -498,7 +500,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48539000" />
+    <option name="totallyTimeSpent" value="48811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -523,10 +525,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="8" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4042934" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4042934" />
       <window_info anchor="bottom" id="Spring" order="10" />
       <window_info anchor="bottom" id="Terminal" order="13" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2574657" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2574657" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Theme Preview" order="7" />
@@ -960,15 +962,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fore/accountPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        <state relative-caret-position="61">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding>
-            <element signature="e#137#138#0" expanded="true" />
-            <element signature="e#168#169#0" expanded="true" />
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#530#531#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
             <element signature="e#248#249#0" expanded="true" />
             <element signature="e#274#275#0" expanded="true" />
             <element signature="e#312#313#0" expanded="true" />
@@ -976,13 +989,6 @@
             <element signature="e#334#335#0" expanded="true" />
             <element signature="e#368#369#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fore/accountPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
         </state>
       </provider>
     </entry>
