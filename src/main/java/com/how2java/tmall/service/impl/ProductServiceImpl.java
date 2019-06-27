@@ -77,7 +77,7 @@ public class ProductServiceImpl implements ProductService{
 		productExample.createCriteria().andCidEqualTo(id);
 		productExample.setOrderByClause("id desc");
 		List<Product> products = productMapper.selectByExample(productExample);
-		//为查找出的所有产品设置一个category
+		//为查找出的所有分类设置一个category
 		setCategory(products);
 		//为所有产品设置预览图
 		setFirstProductImage(products);

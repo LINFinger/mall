@@ -62,14 +62,16 @@ public class ForeController {
 	 * @return
 	 */
 	@RequestMapping("forehome")
-	public String home(Model model) {
+	public String home(Model model,HttpSession session) {
 		/*
 		 * 1.查询出所有分类 2.将所有分类都填充上产品 products 3.为这些分类填充推荐产品集合 productsByRow
 		 */
 		List<Category> cs = categoryService.list();
 		productService.fill(cs);
 		productService.fillByRow(cs);
+		User user = (User)session.getAttribute("user");
 		model.addAttribute("cs", cs);
+		model.addAttribute("user",user);
 		return "fore/home";
 	}
 
@@ -142,6 +144,19 @@ public class ForeController {
 		session.setAttribute("user", user);
 		return "redirect:forehome";
 	}
+
+	/**
+	 * 账户详情界面
+	 *
+	 * @param model
+	 * @param user
+	 * @return
+	 */
+	@RequestMapping("accountPage")
+	public String accountPage(HttpSession session) {
+		return "fore/accountPage";
+	}
+
 
 	/**
 	 * 退出登录,跳转到首页

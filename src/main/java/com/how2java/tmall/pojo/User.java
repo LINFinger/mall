@@ -7,6 +7,56 @@ public class User {
 
     private String password;
 
+    private String address;
+
+    private String phone;
+
+    private String receiver;
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    private String sex;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(String receiver) {
+        this.receiver = receiver;
+    }
+
+    public Integer getPostal() {
+        return postal;
+    }
+
+    public void setPostal(Integer postal) {
+        this.postal = postal;
+    }
+
+    private Integer postal = 0;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public Integer getId() {
         return id;
     }

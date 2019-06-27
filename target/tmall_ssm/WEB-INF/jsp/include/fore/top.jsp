@@ -21,7 +21,7 @@
 	<span>喵，欢迎来天猫</span>
 
 	<c:if test="${!empty user}">
-		<a href="loginPage">${user.name}</a>
+		<a href="accountPage">${user.name}</a>
 		<a href="forelogout">退出</a>
 	</c:if>
 
