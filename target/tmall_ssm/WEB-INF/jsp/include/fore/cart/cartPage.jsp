@@ -8,7 +8,11 @@
 var deleteOrderItem = false;
 var deleteOrderItemid = 0;
 $(function(){
-
+    window.onpageshow = function(event) {
+        if (event.persisted || (window.performance && window.performance.navigation.type == 2)) {
+            window.location.reload()
+        }
+    };
 	//删除订单项函数，获取当前标签的oiid属性，也就是订单项id
 	$("a.deleteOrderItem").click(function(){
 		deleteOrderItem = false;

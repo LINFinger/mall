@@ -22,6 +22,14 @@ public class PageController {
     public String registerSuccessPage() {
         return "fore/registerSuccess";
     }
+    @RequestMapping("passwordReset")
+    public String passwordReset() {
+        return "fore/resetPassword";
+    }
+    @RequestMapping("resetSuccess")
+    public String resetSuccess() {
+        return "fore/resetSuccess";
+    }
     @RequestMapping("loginPage")
     public String loginPage(@ModelAttribute("msg") String msg) {
         return "fore/login";

@@ -62,14 +62,16 @@ public class ForeController {
 	 * @return
 	 */
 	@RequestMapping("forehome")
-	public String home(Model model) {
+	public String home(Model model,HttpSession session) {
 		/*
 		 * 1.查询出所有分类 2.将所有分类都填充上产品 products 3.为这些分类填充推荐产品集合 productsByRow
 		 */
 		List<Category> cs = categoryService.list();
 		productService.fill(cs);
 		productService.fillByRow(cs);
+		User user = (User)session.getAttribute("user");
 		model.addAttribute("cs", cs);
+		model.addAttribute("user",user);
 		return "fore/home";
 	}
 
@@ -96,6 +98,28 @@ public class ForeController {
 	}
 
 	/**
+	 * 重置密码功能
+	 *
+	 * @param model
+	 * @param user
+	 * @return
+	 */
+	@RequestMapping("passwordRegister")
+	public String resetPassword(Model model, User user) {
+		String name = user.getName();
+		name = HtmlUtils.htmlEscape(name);
+		if (!userService.isExist(name)) {
+			// 如果用户不存在，那么当然不能找回密码
+			String m = "用户名不存在";
+			model.addAttribute("msg", m);
+			return "fore/resetPassword";
+		}
+		String password = user.getPassword();
+		user.setPassword(password);
+		userService.reset(user);//更新用户密码
+		return "redirect:resetSuccess";
+	}
+	/**
 	 * 用户登录
 	 * 
 	 * @param model
@@ -120,6 +144,19 @@ public class ForeController {
 		session.setAttribute("user", user);
 		return "redirect:forehome";
 	}
+
+	/**
+	 * 账户详情界面
+	 *
+	 * @param model
+	 * @param user
+	 * @return
+	 */
+	@RequestMapping("accountPage")
+	public String accountPage(HttpSession session) {
+		return "fore/accountPage";
+	}
+
 
 	/**
 	 * 退出登录,跳转到首页
@@ -183,6 +220,28 @@ public class ForeController {
 			return "success";
 		return "fail";
 	}
+
+	/**
+	 * 检验是否加入购物车，并返回信息给jsp ajax函数
+	 *
+	 * @param session
+	 * @return
+	 */
+	@RequestMapping("cartCheck")
+	@ResponseBody
+	public boolean checkCart(int pid,HttpSession session) {
+		Product p = productService.get(pid);
+		User user =(User)  session.getAttribute("user");
+
+		List<OrderItem> ois = orderItemService.listByUser(user.getId());
+		for (OrderItem oi : ois) {
+			if(oi.getProduct().getId().intValue()==p.getId().intValue()){
+				return true;
+			}
+		}
+		return false;
+	}
+
 
 	/**
 	 * 检查登录密码是否正确，并返回信息给jsp页面ajax函数

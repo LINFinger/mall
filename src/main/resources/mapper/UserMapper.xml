@@ -36,7 +36,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, name, password
+    id,name,password,address,phone,receiver,postal,sex,trueName,email
   </sql>
   <select id="selectByExample" parameterType="com.how2java.tmall.pojo.UserExample" resultMap="BaseResultMap">
     select
@@ -97,6 +97,15 @@
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="resetPassword" parameterType="com.how2java.tmall.pojo.User">
+    update user
+    <set>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where name = #{name,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.how2java.tmall.pojo.User">
     update user
