@@ -49,6 +49,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 	                "register",
 	                "loginAjax",
 	                "login",
+					"accountPage",
 	                "product",
 	                "category",
 	                "search"};
