@@ -13,6 +13,8 @@ public interface UserMapper {
 
     int resetPassword(User record);
 
+    int resetAccount(User record);
+
     List<User> selectByExample(UserExample example);
 
     User selectByPrimaryKey(Integer id);

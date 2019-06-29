@@ -39,6 +39,12 @@ public class UserServiceImpl implements UserService {
     public void reset(User c) {
         userMapper.resetPassword(c);
     }
+
+    @Override
+    public void resetAccount(User c) {
+        userMapper.resetAccount(c);
+    }
+
  
     public List<User> list(){
         UserExample example =new UserExample();
