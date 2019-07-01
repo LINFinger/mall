@@ -15,7 +15,15 @@ public class User {
 
     private String phone;
 
-    private String receiver;
+    public AccountInfo receiverInfo;
+
+    public AccountInfo getReceiverInfo() {
+        return receiverInfo;
+    }
+
+    public void setReceiverInfo(AccountInfo receiverInfo) {
+        this.receiverInfo = receiverInfo;
+    }
 
     public String getTrueName() {
         return trueName;
@@ -49,14 +57,6 @@ public class User {
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public String getReceiver() {
-        return receiver;
-    }
-
-    public void setReceiver(String receiver) {
-        this.receiver = receiver;
     }
 
     public Integer getPostal() {

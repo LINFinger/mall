@@ -1,5 +1,6 @@
 package com.how2java.tmall.mapper;
 
+import com.how2java.tmall.pojo.AccountInfo;
 import com.how2java.tmall.pojo.User;
 import com.how2java.tmall.pojo.UserExample;
 import java.util.List;
@@ -14,6 +15,10 @@ public interface UserMapper {
     int resetPassword(User record);
 
     int resetAccount(User record);
+
+    int updateReceiver(AccountInfo record);
+
+    AccountInfo getReceiver(String name);
 
     List<User> selectByExample(UserExample example);
 
