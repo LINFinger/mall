@@ -35,7 +35,7 @@ $(function(){
 		<div class="userTab col-sm-10">
 			<ul class="nav nav-pills">
 				<li class="active"><a href="accountPage">账户信息</a></li>
-				<li><a href="#">收货地址</a></li>
+				<li><a href="receiverInfo">收货地址</a></li>
 			</ul>
 		</div>
 		<div class="accountDetail">

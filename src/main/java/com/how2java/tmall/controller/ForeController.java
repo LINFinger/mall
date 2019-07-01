@@ -1,14 +1,7 @@
 package com.how2java.tmall.controller;
 
 import com.github.pagehelper.PageHelper;
-import com.how2java.tmall.pojo.Category;
-import com.how2java.tmall.pojo.Order;
-import com.how2java.tmall.pojo.OrderItem;
-import com.how2java.tmall.pojo.Product;
-import com.how2java.tmall.pojo.ProductImage;
-import com.how2java.tmall.pojo.PropertyValue;
-import com.how2java.tmall.pojo.Review;
-import com.how2java.tmall.pojo.User;
+import com.how2java.tmall.pojo.*;
 import com.how2java.tmall.service.*;
 
 import comparator.ProductAllComparator;
@@ -141,6 +134,8 @@ public class ForeController {
 			model.addFlashAttribute("msg", msg);
 			return "redirect:loginPage"; // fore/login
 		}
+		AccountInfo receiverInfo = userService.get(user.getName());
+		user.setReceiverInfo(receiverInfo);
 		session.setAttribute("user", user);
 		return "redirect:forehome";
 	}
@@ -179,6 +174,45 @@ public class ForeController {
 		return "fore/accountPage";
 	}
 
+    /**
+     * 默认收货信息修改
+     *
+     * @param model
+     * @param user
+     * @return
+     */
+    @RequestMapping("alterReceiverInfo")
+    public String receiverChange(HttpSession session,@RequestParam String userName,@RequestParam String phone,
+                                 @RequestParam String address,@RequestParam String receiver) {
+        User user = (User)session.getAttribute("user");
+        AccountInfo receiverInfo = new AccountInfo();
+        receiverInfo.setUserName(userName);
+        receiverInfo.setAddress(address);
+        receiverInfo.setPhone(phone);
+        receiverInfo.setReceiver(receiver);
+
+        user.setReceiverInfo(receiverInfo);
+        userService.updateReceiver(receiverInfo);
+        session.setAttribute("user", user);
+        return "fore/accountPage";
+    }
+
+	/**
+	 * 默认收货信息展示
+	 *
+	 * @param model
+	 * @param user
+	 * @return
+	 */
+	@RequestMapping("receiverInfo")
+	public String receiverInfo(HttpSession session) {
+		User user = (User)session.getAttribute("user");
+		AccountInfo receiverInfo = userService.get(user.getName());
+		user.setReceiverInfo(receiverInfo);
+
+		session.setAttribute("user", user);
+		return "fore/receiverInfo";
+	}
 
 	/**
 	 * 退出登录,跳转到首页

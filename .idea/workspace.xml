@@ -7,11 +7,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="549ee5ab-618b-4645-8437-b501a20337da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/AccountInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fore/receiverInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/how2java/tmall/controller/ForeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/how2java/tmall/controller/ForeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/how2java/tmall/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/how2java/tmall/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/how2java/tmall/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/how2java/tmall/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/how2java/tmall/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/how2java/tmall/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/include/fore/account/accountDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/include/fore/account/accountDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/how2java/tmall/controller/ForeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/how2java/tmall/controller/ForeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/how2java/tmall/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/how2java/tmall/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/how2java/tmall/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/how2java/tmall/pojo/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/how2java/tmall/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/how2java/tmall/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/how2java/tmall/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/how2java/tmall/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tmall_ssm/WEB-INF/classes/com/how2java/tmall/controller/ForeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmall_ssm/WEB-INF/classes/com/how2java/tmall/controller/ForeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tmall_ssm/WEB-INF/classes/com/how2java/tmall/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmall_ssm/WEB-INF/classes/com/how2java/tmall/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tmall_ssm/WEB-INF/classes/com/how2java/tmall/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmall_ssm/WEB-INF/classes/com/how2java/tmall/pojo/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tmall_ssm/WEB-INF/classes/com/how2java/tmall/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmall_ssm/WEB-INF/classes/com/how2java/tmall/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tmall_ssm/WEB-INF/classes/com/how2java/tmall/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmall_ssm/WEB-INF/classes/com/how2java/tmall/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tmall_ssm/WEB-INF/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tmall_ssm/WEB-INF/classes/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,23 +54,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ForeController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ForeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/controller/ForeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="174" column="25" selection-start-line="174" selection-start-column="25" selection-end-line="174" selection-end-column="25" />
+            <state relative-caret-position="227">
+              <caret line="210" column="36" selection-start-line="210" selection-start-column="36" selection-end-line="210" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/service/UserService.java">
+      <file leaf-file-name="accountDetail.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/include/fore/account/accountDetail.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="21" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="128">
+              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="receiverInfo.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fore/receiverInfo.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/AccountInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="12" column="28" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="19" column="38" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -61,26 +102,8 @@
       <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="123" column="11" selection-start-line="123" selection-start-column="11" selection-end-line="123" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/mapper/UserMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="192">
+              <caret line="156" column="42" lean-forward="true" selection-start-line="156" selection-start-column="42" selection-end-line="156" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -90,15 +113,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>forecreateOrder</find>
-      <find>userMessage</find>
-      <find>firstColumn</find>
       <find>address</find>
       <find>post</find>
       <find>UserExample</find>
@@ -110,11 +131,9 @@
       <find>selectByExample</find>
       <find>Base_Column_List</find>
       <find>getReciver</find>
-      <find>receiver</find>
       <find>tureName</find>
       <find>contextPath</find>
       <find>spring</find>
-      <find>accountPage</find>
       <find>form</find>
       <find>registerPage</find>
       <find>register</find>
@@ -126,6 +145,11 @@
       <find>forelogin</find>
       <find>truename</find>
       <find>alterAccountInfo</find>
+      <find>Example_Where_Clause</find>
+      <find>receiver</find>
+      <find>setReceiverInfo</find>
+      <find>accountPage</find>
+      <find>收货地址</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -170,16 +194,20 @@
         <option value="$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/OrderExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/CategoryExample.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/include/fore/top.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/User.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fore/accountPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/how2java/tmall/interceptor/LoginInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/AccountInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/how2java/tmall/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/how2java/tmall/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/how2java/tmall/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/how2java/tmall/controller/ForeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/User.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fore/ReceiverInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/include/fore/account/accountDetail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/how2java/tmall/controller/ForeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fore/receiverInfo.jsp" />
       </list>
     </option>
   </component>
@@ -246,8 +274,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,6 +317,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tmall" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tmall_ssm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmall_ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tmall_ssm" type="b2602c69:ProjectViewProjectNode" />
@@ -423,7 +460,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -572,74 +609,49 @@
       <workItem from="1560999328974" duration="362000" />
       <workItem from="1560999697149" duration="10702000" />
       <workItem from="1561167681117" duration="29398000" />
+      <workItem from="1561944774748" duration="4628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59488000" />
+    <option name="totallyTimeSpent" value="65313000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="12" weight="0.2647585" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.3292978" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="13" />
-      <window_info id="Designer" order="15" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.08635997" />
-      <window_info id="Structure" order="9" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24939467" />
-      <window_info id="UI Designer" order="14" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Designer" order="7" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.3291592" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info id="Image Layers" order="12" />
+      <window_info id="Image Layers" order="5" />
       <window_info anchor="bottom" id="Java Enterprise" order="8" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3291592" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3864043" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4651163" />
       <window_info anchor="bottom" id="Spring" order="10" />
       <window_info anchor="bottom" id="Terminal" order="13" />
-      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.26150122" />
-      <window_info id="Web" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26150122" />
+      <window_info id="Web" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Favorites" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.4042934" />
-      <window_info anchor="bottom" id="Event Log" order="19" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.2574657" />
-      <window_info id="Favorites" order="10" side_tool="true" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Java Enterprise" order="20" />
-      <window_info anchor="bottom" id="Terminal" order="25" />
-      <window_info anchor="bottom" id="Application Servers" order="24" weight="0.2647585" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="8" weight="0.3292978" />
-      <window_info id="Web" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="21" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Spring" order="22" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="12" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Structure" order="9" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info id="Capture Tool" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="23" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="TODO" order="18" />
-      <window_info anchor="bottom" id="Inspection" order="17" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="15" weight="0.25" />
-      <window_info id="UI Designer" order="14" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="26" weight="0.3291592" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info id="Designer" order="15" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -658,16 +670,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-128">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/include/admin/adminFooter.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/include/admin/adminHeader.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1017" />
@@ -817,24 +819,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/UserExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-497">
-          <caret line="178" column="35" lean-forward="true" selection-start-line="178" selection-start-column="35" selection-end-line="178" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/ReviewExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
         </state>
       </provider>
     </entry>
@@ -909,13 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fore/accountPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/include/fore/product/imgAndInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2992">
@@ -937,13 +918,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/include/fore/account/accountDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144">
-          <caret line="69" column="44" lean-forward="true" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/include/fore/passwordReset.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -951,35 +925,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/UserExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="99" column="16" selection-start-line="99" selection-start-column="16" selection-end-line="99" selection-end-column="16" />
-          <folding>
-            <element signature="e#1722#1723#0" expanded="true" />
-            <element signature="e#1795#1796#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-2893">
+          <caret line="178" column="35" lean-forward="true" selection-start-line="178" selection-start-column="35" selection-end-line="178" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/ReviewExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="224">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        <state relative-caret-position="301">
+          <caret line="55" column="44" lean-forward="true" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1139#1140#0" expanded="true" />
+            <element signature="e#1183#1184#0" expanded="true" />
+            <element signature="e#1239#1240#0" expanded="true" />
+            <element signature="e#1283#1284#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="21" />
+        <state relative-caret-position="224">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -988,15 +975,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="123" column="11" selection-start-line="123" selection-start-column="11" selection-end-line="123" selection-end-column="11" />
+        <state relative-caret-position="192">
+          <caret line="156" column="42" lean-forward="true" selection-start-line="156" selection-start-column="42" selection-end-line="156" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fore/accountPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/pojo/AccountInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/include/fore/account/accountDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/how2java/tmall/controller/ForeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="174" column="25" selection-start-line="174" selection-start-column="25" selection-end-line="174" selection-end-column="25" />
+        <state relative-caret-position="227">
+          <caret line="210" column="36" selection-start-line="210" selection-start-column="36" selection-end-line="210" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/fore/receiverInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
         </state>
       </provider>
     </entry>

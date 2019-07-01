@@ -6,6 +6,12 @@
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="password" jdbcType="VARCHAR" property="password" />
   </resultMap>
+  <resultMap id="ReceiverMap" type="com.how2java.tmall.pojo.AccountInfo">
+    <result column="userName" jdbcType="VARCHAR" property="userName" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="receiver" jdbcType="VARCHAR" property="receiver" />
+  </resultMap>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -36,7 +42,10 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id,name,password,address,phone,receiver,postal,sex,trueName,email
+    id,name,password,address,phone,postal,sex,trueName,email
+  </sql>
+  <sql id="Receiver_Column_List">
+    userName,address,phone,receiver
   </sql>
   <select id="selectByExample" parameterType="com.how2java.tmall.pojo.UserExample" resultMap="BaseResultMap">
     select
@@ -58,6 +67,12 @@
     <include refid="Base_Column_List" />
     from user
     where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="getReceiver" parameterType="java.lang.String" resultMap="ReceiverMap">
+    select
+    <include refid="Receiver_Column_List" />
+    from receiverInfo
+    where userName = #{userName,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from user
@@ -106,6 +121,25 @@
       </if>
     </set>
     where name = #{name,jdbcType=VARCHAR}
+  </update>
+  <update id="updateReceiver" parameterType="com.how2java.tmall.pojo.AccountInfo">
+    update receiverInfo
+    <set>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <set>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <set>
+      <if test="receiver != null">
+        receiver = #{receiver,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where name = #{userName,jdbcType=VARCHAR}
   </update>
   <update id="resetAccount" parameterType="com.how2java.tmall.pojo.User">
     update user

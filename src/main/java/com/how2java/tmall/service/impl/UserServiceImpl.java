@@ -1,7 +1,8 @@
 package com.how2java.tmall.service.impl;
  
 import java.util.List;
- 
+
+import com.how2java.tmall.pojo.AccountInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
  
@@ -45,7 +46,16 @@ public class UserServiceImpl implements UserService {
         userMapper.resetAccount(c);
     }
 
- 
+    @Override
+    public void updateReceiver(AccountInfo c) {
+        userMapper.updateReceiver(c);
+    }
+
+    @Override
+    public AccountInfo get(String name){
+        return userMapper.getReceiver(name);
+    }
+
     public List<User> list(){
         UserExample example =new UserExample();
         example.setOrderByClause("id desc");
