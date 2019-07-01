@@ -194,7 +194,7 @@ public class ForeController {
         user.setReceiverInfo(receiverInfo);
         userService.updateReceiver(receiverInfo);
         session.setAttribute("user", user);
-        return "fore/accountPage";
+        return "fore/receiverInfo";
     }
 
 	/**
