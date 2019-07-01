@@ -9,7 +9,6 @@ public interface UserService {
     void delete(int id);
     void update(User c);
     void reset(User c);
-    void resetAccount(User c);
     User get(int id);
     List<User> list();
     boolean isExist(String name);

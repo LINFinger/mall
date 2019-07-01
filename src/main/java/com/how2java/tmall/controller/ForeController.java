@@ -157,28 +157,6 @@ public class ForeController {
 		return "fore/accountPage";
 	}
 
-	/**
-	 * 账户详情修改
-	 *
-	 * @param model
-	 * @param user
-	 * @return
-	 */
-	@RequestMapping("alterAccountInfo")
-	public String accountChange(HttpSession session,@RequestParam String truename,@RequestParam String phone,
-	@RequestParam String address,@RequestParam Integer postal,@RequestParam String sex,@RequestParam String email) {
-		User user = (User)session.getAttribute("user");
-		user.setTrueName(truename);
-		user.setAddress(address);
-		user.setEmail(email);
-		user.setPhone(phone);
-		user.setSex(sex);
-		user.setPostal(postal);
-		userService.resetAccount(user);
-		session.setAttribute("user", user);
-		return "fore/accountPage";
-	}
-
 
 	/**
 	 * 退出登录,跳转到首页
