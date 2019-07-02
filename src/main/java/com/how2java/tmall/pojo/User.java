@@ -1,5 +1,7 @@
 package com.how2java.tmall.pojo;
 
+import java.util.List;
+
 public class User {
     private Integer id;
 
@@ -15,13 +17,13 @@ public class User {
 
     private String phone;
 
-    public AccountInfo receiverInfo;
+    public List<AccountInfo> receiverInfo;
 
-    public AccountInfo getReceiverInfo() {
+    public List<AccountInfo> getReceiverInfo() {
         return receiverInfo;
     }
 
-    public void setReceiverInfo(AccountInfo receiverInfo) {
+    public void setReceiverInfo(List<AccountInfo> receiverInfo) {
         this.receiverInfo = receiverInfo;
     }
 

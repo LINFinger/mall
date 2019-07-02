@@ -7,8 +7,11 @@
     <result column="password" jdbcType="VARCHAR" property="password" />
   </resultMap>
   <resultMap id="ReceiverMap" type="com.how2java.tmall.pojo.AccountInfo">
+    <result column="id" jdbcType="INTEGER" property="id" />
     <result column="userName" jdbcType="VARCHAR" property="userName" />
-    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="address1" jdbcType="VARCHAR" property="address1" />
+    <result column="address2" jdbcType="VARCHAR" property="address2" />
+    <result column="postal" jdbcType="VARCHAR" property="postal" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="receiver" jdbcType="VARCHAR" property="receiver" />
   </resultMap>
@@ -45,7 +48,7 @@
     id,name,password,address,phone,postal,sex,trueName,email
   </sql>
   <sql id="Receiver_Column_List">
-    userName,address,phone,receiver
+    id,userName,address1,address2,phone,receiver,postal
   </sql>
   <select id="selectByExample" parameterType="com.how2java.tmall.pojo.UserExample" resultMap="BaseResultMap">
     select
@@ -70,6 +73,7 @@
   </select>
   <select id="getReceiver" parameterType="java.lang.String" resultMap="ReceiverMap">
     select
+      distinct
     <include refid="Receiver_Column_List" />
     from receiverInfo
     where userName = #{userName,jdbcType=VARCHAR}
@@ -78,9 +82,18 @@
     delete from user
     where id = #{id,jdbcType=INTEGER}
   </delete>
+  <delete id="deleteReceiver" parameterType="com.how2java.tmall.pojo.AccountInfo">
+    delete from receiverInfo
+    where userName = #{userName,jdbcType=VARCHAR} and id = #{id,jdbcType=INTEGER}
+  </delete>
   <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.how2java.tmall.pojo.User" useGeneratedKeys="true">
     insert into user (name, password)
     values (#{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR})
+  </insert>
+  <insert id="addReceiver" parameterType="com.how2java.tmall.pojo.AccountInfo">
+    insert into receiverInfo (userName,address1,address2,phone,receiver,id,postal)
+    values (#{userName,jdbcType=VARCHAR}, #{address1,jdbcType=VARCHAR}, #{address2,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR},
+     #{receiver,jdbcType=VARCHAR}, #{id,jdbcType=INTEGER}, #{postal,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.how2java.tmall.pojo.User" useGeneratedKeys="true">
     insert into user
@@ -125,8 +138,8 @@
   <update id="updateReceiver" parameterType="com.how2java.tmall.pojo.AccountInfo">
     update receiverInfo
     <set>
-      <if test="address != null">
-        address = #{address,jdbcType=VARCHAR},
+      <if test="address1 != null">
+        address1 = #{address1,jdbcType=VARCHAR},
       </if>
     </set>
     <set>
@@ -139,7 +152,17 @@
         receiver = #{receiver,jdbcType=VARCHAR},
       </if>
     </set>
-    where name = #{userName,jdbcType=VARCHAR}
+    <set>
+      <if test="address2 != null">
+        address2 = #{address2,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <set>
+      <if test="postal != null">
+        postal = #{postal,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where name = #{userName,jdbcType=VARCHAR} and id = #{id,jdbcType=VARCHAR}
   </update>
   <update id="resetAccount" parameterType="com.how2java.tmall.pojo.User">
     update user

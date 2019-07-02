@@ -134,7 +134,7 @@ public class ForeController {
 			model.addFlashAttribute("msg", msg);
 			return "redirect:loginPage"; // fore/login
 		}
-		AccountInfo receiverInfo = userService.get(user.getName());
+		List<AccountInfo> receiverInfo = userService.get(user.getName());
 		user.setReceiverInfo(receiverInfo);
 		session.setAttribute("user", user);
 		return "redirect:forehome";
@@ -182,20 +182,85 @@ public class ForeController {
      * @return
      */
     @RequestMapping("alterReceiverInfo")
-    public String receiverChange(HttpSession session,@RequestParam String userName,@RequestParam String phone,
-                                 @RequestParam String address,@RequestParam String receiver) {
+    public String receiverChange(HttpSession session,@RequestParam int id,@RequestParam String userName,@RequestParam String phone,
+                                 @RequestParam String address1,@RequestParam String address2,@RequestParam String receiver,@RequestParam String postal) {
         User user = (User)session.getAttribute("user");
-        AccountInfo receiverInfo = new AccountInfo();
+        List<AccountInfo> infos = user.getReceiverInfo();
+        AccountInfo receiverInfo = infos.get(id);
+
+        receiverInfo.setId(id);
         receiverInfo.setUserName(userName);
-        receiverInfo.setAddress(address);
+        receiverInfo.setAddress1(address1);
+		receiverInfo.setAddress2(address2);
+		receiverInfo.setPostal(postal);
         receiverInfo.setPhone(phone);
         receiverInfo.setReceiver(receiver);
 
-        user.setReceiverInfo(receiverInfo);
+        infos.set(id,receiverInfo);
+        user.setReceiverInfo(infos);
         userService.updateReceiver(receiverInfo);
         session.setAttribute("user", user);
         return "fore/receiverInfo";
     }
+
+	/**
+	 * 默认收货信息添加
+	 *
+	 * @param model
+	 * @param user
+	 * @return
+	 */
+	@RequestMapping("addReceiver")
+	public String addReceiver(HttpSession session,@RequestParam String userName,@RequestParam String phone,
+							  @RequestParam String address1,@RequestParam String address2,@RequestParam String receiver,@RequestParam String postal) {
+		User user = (User)session.getAttribute("user");
+		List<AccountInfo> receiverInfo = userService.get(user.getName());
+		AccountInfo info = new AccountInfo();
+		int id = 0;
+		info.setId(id);
+		info.setUserName(userName);
+		info.setAddress1(address1);
+		info.setAddress2(address2);
+		info.setPostal(postal);
+		info.setPhone(phone);
+		info.setReceiver(receiver);
+		if(receiverInfo == null){
+			receiverInfo = new ArrayList<>();
+		}
+		else{
+			id = receiverInfo.size();
+			info.setId(id);
+		}
+		receiverInfo.add(info);
+		userService.addReceiver(info);
+		user.setReceiverInfo(receiverInfo);
+
+		session.setAttribute("user", user);
+		return "fore/receiverInfo";
+	}
+
+	/**
+	 * 默认收货信息删除
+	 *
+	 * @param model
+	 * @param user
+	 * @return
+	 */
+	@RequestMapping("deleteReceiver")
+	public String deleteReceiver(HttpSession session,@RequestParam int id) {
+		User user = (User)session.getAttribute("user");
+		List<AccountInfo> receiverInfo = userService.get(user.getName());
+		AccountInfo accountInfo = new AccountInfo();
+		accountInfo.setId(id);
+		accountInfo.setUserName(user.getName());
+
+		userService.deleteReceiver(accountInfo);
+		receiverInfo.remove(id);
+		user.setReceiverInfo(receiverInfo);
+
+		session.setAttribute("user", user);
+		return "fore/receiverInfo";
+	}
 
 	/**
 	 * 默认收货信息展示
@@ -207,7 +272,7 @@ public class ForeController {
 	@RequestMapping("receiverInfo")
 	public String receiverInfo(HttpSession session) {
 		User user = (User)session.getAttribute("user");
-		AccountInfo receiverInfo = userService.get(user.getName());
+		List<AccountInfo> receiverInfo = userService.get(user.getName());
 		user.setReceiverInfo(receiverInfo);
 
 		session.setAttribute("user", user);
