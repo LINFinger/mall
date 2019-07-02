@@ -2343,3 +2343,44 @@ div.alterErrorMessageDiv{
 	display: none;
 	text-align: center;
 }
+
+div.receiverTips{
+	font-size: 14px;
+    color: #014d7f;
+    background-color: #f3f8fe;
+    height: 30px;
+    line-height: 30px;
+    margin: 20px;
+}
+
+table.receiverInformationTable{
+	margin: 20px;
+	width:95%;
+}
+
+.receiverInformationTable th {
+    padding: 0;
+    background: #ebecf0;
+    color: #333;
+    text-align: left;
+    font-weight: 400;
+    border: 1px solid #dcdee3;
+}
+
+.receiverInformationTable th .receiverInformationTh{
+    padding: 6px 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.receiverInformationTable td{
+	padding: 0;
+}
+
+.receiverInformationTable td .receiverInformationTd {
+    padding: 6px 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}

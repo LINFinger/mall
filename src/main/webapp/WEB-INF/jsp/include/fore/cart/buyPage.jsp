@@ -2,8 +2,35 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
+	
+<script>
+$(function(){
+    $("a.receiverInformationSelect").click(function(){
+    	$("input#address1").val($(".address1").text());
+    	$("input#address2").val($(".address2").text());
+    	$("input#receiver").val($(".receiver").text());
+    	$("input#phone").val($(".phone").text());
+    	$("input#postal").val($(".postal").text());
+    });
+    
+    $("form.submitOrderForm").submit(function(){
+            if(0==$("#address1").val().length||0==$("#phone").val().length||0==$("#address2").val().length||0==$("#receiver").val().length||0==$("#postal").val().length){
+                $("span.errorMessage").html("请完整填写收货信息");
+                $("div.alterErrorMessageDiv").show();
+                return false;
+            }
+            return true;
+        });
+
+        $("form.submitOrderForm input").keyup(function(){
+            $("div.alterErrorMessageDiv").hide();
+        });
+        
+    })
+</script>
+
 <div class="buyPageDiv">
-  <form action="forecreateOrder" method="post">
+  <form action="forecreateOrder" role="form" class="submitOrderForm form-horizontal" method="post">
   
 	<div class="buyFlow">
 		<img class="pull-left" src="img/site/simpleLogo.png">
@@ -12,33 +39,115 @@
 	</div>
 	<div class="address">
 		<div class="addressTip">输入收货地址</div>
-		<div>
 		
-			<table class="addressTable">
-				<tr>
-					<td class="firstColumn">详细地址<span class="redStar">*</span></td>
-					
-					<td><textarea name="address" placeholder="建议您如实填写详细收货地址，例如街道名称，门牌号码，楼层和房间号等信息"></textarea></td>
-				</tr>
-				<tr>
-					<td>邮政编码</td>
-					<td><input  name="post" placeholder="如果您不清楚邮递区号，请填写000000" type="text"></td>
-				</tr>
-				<tr>
-					<td>收货人姓名<span class="redStar">*</span></td>
-					<td><input  name="receiver"  placeholder="长度不超过25个字符" type="text"></td>
-				</tr>
-				<tr>
-					<td>手机号码 <span class="redStar">*</span></td>
-					<td><input name="mobile"  placeholder="请输入11位手机号码" type="text"></td>
-				</tr>
-			</table>
-			
+		<div class="alterErrorMessageDiv">
+			<div class="alert alert-danger">
+				<span class="errorMessage"></span>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label for="truename" class="col-sm-1 control-label"><span class="redStar">*</span>地址信息</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="address1" id="address1" placeholder="请输入省/市/区" >
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="phone" class="col-sm-1 control-label"><span class="redStar">*</span>详细地址</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="address2" id="address2" placeholder="请输入详细地址信息，如道路、门牌号、小区、楼栋号、单元等信息">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="email" class="col-sm-1 control-label"><span class="redStar">*</span>收件人</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="receiver" id="receiver" placeholder="长度不超过25字符">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="address" class="col-sm-1 control-label"><span class="redStar">*</span>手机号码</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="phone" id="phone" placeholder="请输入收件人手机号码">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="postal" class="col-sm-1 control-label"><span class="redStar">*</span>邮政编码</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" name="postal" id="postal" placeholder="请输入邮政编码">
+			</div>
 		</div>
 
-
-
-
+		
+		<div class="receiverInformationTable">
+		<table class="receiverInformationTable table table-bordered table-hover class">
+			<colgroup>
+				<col style="width: 70px;">
+				<col>
+				<col style="width: 200px;">
+				<col style="width: 100px;">
+				<col style="width: 140px;">
+				<col style="width: 110px;">
+<!-- 			<col style="width: 90px;"> -->	
+			</colgroup>
+			<thead class="receiverInformationThead">
+				<tr>
+					<th><div class="receiverInformationTh">收货人</div></th>
+					<th><div class="receiverInformationTh">所在地区</div></th>
+					<th><div class="receiverInformationTh">详细地址</div></th>
+					<th><div class="receiverInformationTh">邮编</div></th>
+					<th><div class="receiverInformationTh">电话/手机</div></th>
+					<th class="operation"><div class="receiverInformationTh">操作</div></th>
+<!--				<th></th>  -->
+				</tr>
+			</thead>
+			<tbody>
+				<tr riid="${oi.id}" class="receiverItemTR">
+					<td>
+						<div class="receiverInformationTd receiver">name</div>
+					</td>
+					<td>
+						<div class="receiverInformationTd address1">address1</div>
+					</td>
+					<td>
+						<div class="receiverInformationTd address2">address2</div>
+					</td>
+					<td>
+						<div class="receiverInformationTd postal">postal</div>
+					</td>
+					<td >
+						<div class="receiverInformationTd phone">phone</div>
+					</td>
+					<td>
+						<div class="receiverInformationTd"><a class="receiverInformationSelect"href="#nowhere">选择</a></div>
+					</td>
+				</tr>
+					<!-- 循环订单项  -->
+				<c:forEach items="${ris }" var="oi">
+					<tr riid="${ri.id}" class="receiverItemTR">
+						<td>
+							<div class="receiverInformationTd">name</div>
+						</td>
+						<td>
+							<div class="receiverInformationTd">address1</div>
+						</td>
+						<td>
+							<div class="receiverInformationTd">address2</div>
+						</td>
+						<td>
+							<div class="receiverInformationTd">postal</div>
+						</td>
+						<td >
+							<div class="receiverInformationTd">phone</div>
+						</td>
+						<td>
+							<div class="receiverInformationTd"><a class="deleteReceiverItem" riid="${ri.id}"  href="#nowhere">删除</a></div>
+						</td>
+					</tr>
+				</c:forEach>				
+			</tbody>
+		</table>
+		</div>
+		
 		
 		
 		
