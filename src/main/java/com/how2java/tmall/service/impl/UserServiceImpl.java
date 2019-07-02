@@ -20,12 +20,22 @@ public class UserServiceImpl implements UserService {
     public void add(User u) {
         userMapper.insert(u);
     }
+
+    @Override
+    public void addReceiver(AccountInfo c) {
+        userMapper.addReceiver(c);
+    }
  
     @Override
     public void delete(int id) {
         userMapper.deleteByPrimaryKey(id);
     }
- 
+
+    @Override
+    public void deleteReceiver(AccountInfo c) {
+        userMapper.deleteReceiver(c);
+    }
+
     @Override
     public void update(User u) {
         userMapper.updateByPrimaryKeySelective(u);
@@ -52,7 +62,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public AccountInfo get(String name){
+    public List<AccountInfo> get(String name){
         return userMapper.getReceiver(name);
     }
 
