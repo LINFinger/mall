@@ -7,8 +7,3 @@
 <%@include file="../include/fore/simpleSearch.jsp"%>
 <%@include file="../include/fore/account/receiverInformationPage.jsp"%>
 <%@include file="../include/fore/footer.jsp"%>
-
-<p>${user.getReceiverInfo().getAddress()}</p>
-<p>${user.getReceiverInfo().getPhone()}</p>
-<p>${user.getReceiverInfo().getReceiver()}</p>
-

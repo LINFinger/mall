@@ -12,37 +12,31 @@ $(function(){
         }
     };
     
-    //删除订单项函数，获取当前标签的oiid属性，也就是订单项id
+
 	$("a.deleteReceiverItem").click(function(){
 		deleteReceiverItem = false;
-		var riid = $(this).attr("riid")
+		var riid = $(this).attr("riid");
 		deleteReceiverItemid = riid;
-		//删除提示模态
 		$("#deleteConfirmModal").modal('show');	   
 	});
-	//模态选择了是的话就删除订单项
+
 	$("button.deleteConfirmButton").click(function(){
-		deleteOrderItem = true;
+		deleteReceiverItem = true;
 		$("#deleteConfirmModal").modal('hide');
 	});
 	
-	//模态框完全对用户隐藏时触发。也就是选择删除，完全隐藏后触发这个函数
+
 	$('#deleteConfirmModal').on('hidden.bs.modal', function (e) {
 		if(deleteReceiverItem){
-			var page="foredeleteReceiverItem";
+			var page="deleteReceiver";
 			$.post(
 				    page,
-				    {"riid":deleteReceiverItemid},
+				    {"id":deleteReceiverItemid},
 				    function(result){
-						if("success"==result){
 							$("tr.receiverItemTR[riid="+deleteReceiverItemid+"]").hide();
 						}
-						else{
-							location.href="loginPage";
-						}
-				    }
 				);
-			
+			$("tr.receiverItemTR[riid="+deleteReceiverItemid+"]").hide();
 		}
 	})	
     
@@ -83,7 +77,7 @@ $(function(){
 				<div class="receiverTips">
 					编辑收货信息：
 				</div>
-				<form action="alterAccountInfo" role="form" class="alterAccountForm form-horizontal">
+				<form action="addReceiver" role="form" class="alterAccountForm form-horizontal">
 					<div class="form-group">
 						<label for="truename" class="col-sm-2 control-label"><span class="redStar">*</span>地址信息</label>
 						<div class="col-sm-9">
@@ -116,7 +110,7 @@ $(function(){
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-5 col-sm-7">
-							<button type="submit" class="btn btn-default">保存</button>
+							<button type="submit" class="btn btn-default">增添</button>
 						</div>
 					</div>
 				</form>
@@ -147,49 +141,29 @@ $(function(){
 						</tr>
 					</thead>
 					<tbody>
-							<tr riid="${oi.id}" class="receiverItemTR">
-								<td>
-									<div class="receiverInformationTd">name</div>
-								</td>
-								<td>
-									<div class="receiverInformationTd">address1</div>
-								</td>
-								<td>
-									<div class="receiverInformationTd">address2</div>
-								</td>
-								<td>
-									<div class="receiverInformationTd">postal</div>
-								</td>
-								<td >
-									<div class="receiverInformationTd">phone</div>
-								</td>
-								<td>
-									<div class="receiverInformationTd"><a class="deleteReceiverItem" oiid="${oi.id}"  href="#nowhere">删除</a></div>
-								</td>
-							</tr>
 					<!-- 循环订单项  -->
-						<c:forEach items="${ris }" var="oi">
-							<tr riid="${ri.id}" class="receiverItemTR">
+						<c:forEach items="${user.getReceiverInfo()}" var="ri">
+							<tr riid="${ri.getId()}" class="receiverItemTR">
 								<td>
-									<div class="receiverInformationTd">name</div>
+									<div class="receiverInformationTd">${ri.getReceiver()}</div>
 								</td>
 								<td>
-									<div class="receiverInformationTd">address1</div>
+									<div class="receiverInformationTd">${ri.getAddress1()}</div>
 								</td>
 								<td>
-									<div class="receiverInformationTd">address2</div>
+									<div class="receiverInformationTd">${ri.getAddress2()}</div>
 								</td>
 								<td>
-									<div class="receiverInformationTd">postal</div>
+									<div class="receiverInformationTd">${ri.getPostal()}</div>
 								</td>
 								<td >
-									<div class="receiverInformationTd">phone</div>
+									<div class="receiverInformationTd">${ri.getPhone()}</div>
 								</td>
 								<td>
-									<div class="receiverInformationTd"><a class="deleteReceiverItem" riid="${ri.id}"  href="#nowhere">删除</a></div>
+									<div class="receiverInformationTd"><a class="deleteReceiverItem" riid="${ri.getId()}"  href="#nowhere">删除</a></div>
 								</td>
 							</tr>
-						</c:forEach>				
+						</c:forEach>
 					</tbody>
 				</table>
 				</div>
