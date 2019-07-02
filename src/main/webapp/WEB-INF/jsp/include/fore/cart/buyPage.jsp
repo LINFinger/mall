@@ -6,11 +6,12 @@
 <script>
 $(function(){
     $("a.receiverInformationSelect").click(function(){
-    	$("input#address1").val($(".address1").text());
-    	$("input#address2").val($(".address2").text());
-    	$("input#receiver").val($(".receiver").text());
-    	$("input#phone").val($(".phone").text());
-    	$("input#postal").val($(".postal").text());
+    	var riid=$(this).attr("riid");
+    	$("input#address1").val($("#address1Information-"+riid).text());
+    	$("input#address2").val($("#address2Information-"+riid).text());
+    	$("input#receiver").val($("#receiverInformation-"+riid).text());
+    	$("input#phone").val($("#phoneInformation-"+riid).text());
+    	$("input#postal").val($("#postalInformation-"+riid).text());
     });
     
     $("form.submitOrderForm").submit(function(){
@@ -101,46 +102,26 @@ $(function(){
 				</tr>
 			</thead>
 			<tbody>
-				<tr riid="${oi.id}" class="receiverItemTR">
-					<td>
-						<div class="receiverInformationTd receiver">name</div>
-					</td>
-					<td>
-						<div class="receiverInformationTd address1">address1</div>
-					</td>
-					<td>
-						<div class="receiverInformationTd address2">address2</div>
-					</td>
-					<td>
-						<div class="receiverInformationTd postal">postal</div>
-					</td>
-					<td >
-						<div class="receiverInformationTd phone">phone</div>
-					</td>
-					<td>
-						<div class="receiverInformationTd"><a class="receiverInformationSelect"href="#nowhere">选择</a></div>
-					</td>
-				</tr>
 					<!-- 循环订单项  -->
-				<c:forEach items="${ris }" var="oi">
-					<tr riid="${ri.id}" class="receiverItemTR">
+				<c:forEach items="${user.getReceiverInfo()}" var="ri">
+					<tr riid="${ri.getId()}" class="receiverItemTR">
 						<td>
-							<div class="receiverInformationTd">name</div>
+							<div class="receiverInformationTd" id="receiverInformation-${ri.getId()}">${ri.getReceiver()}</div>
 						</td>
 						<td>
-							<div class="receiverInformationTd">address1</div>
+							<div class="receiverInformationTd" id="address1Information-${ri.getId()}">${ri.getAddress1()}</div>
 						</td>
 						<td>
-							<div class="receiverInformationTd">address2</div>
+							<div class="receiverInformationTd" id="address2Information-${ri.getId()}">${ri.getAddress2()}</div>
 						</td>
 						<td>
-							<div class="receiverInformationTd">postal</div>
+							<div class="receiverInformationTd" id="postalInformation-${ri.getId()}">${ri.getPostal()}</div>
 						</td>
 						<td >
-							<div class="receiverInformationTd">phone</div>
+							<div class="receiverInformationTd" id="phoneInformation-${ri.getId()}">${ri.getPhone()}</div>
 						</td>
 						<td>
-							<div class="receiverInformationTd"><a class="deleteReceiverItem" riid="${ri.id}"  href="#nowhere">删除</a></div>
+							<div class="receiverInformationTd"><a class="receiverInformationSelect" riid="${ri.getId()}"  href="#nowhere">选择</a></div>
 						</td>
 					</tr>
 				</c:forEach>				
