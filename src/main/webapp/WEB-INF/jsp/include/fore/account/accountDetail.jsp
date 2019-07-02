@@ -51,13 +51,13 @@ $(function(){
 				</div>
 				<form action="alterAccountInfo" role="form" class="alterAccountForm form-horizontal">
 					<div class="form-group">
-						<label for="truename" class="col-sm-2 control-label">*真实姓名</label>
+						<label for="truename" class="col-sm-2 control-label"><span class="redStar">*</span>真实姓名</label>
 						<div class="col-sm-9">
 							<input type="text" class="form-control" name="truename" id="truename" placeholder="请输入真实姓名" value="${user.getTrueName()}">
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="sex" class="col-sm-2 control-label">*性别</label>
+						<label for="sex" class="col-sm-2 control-label"><span class="redStar">*</span>性别</label>
 						<div class="col-sm-10">
 							<label class="checkbox-inline">
       							<input type="radio" name="sex" id="sex1" value="男">男
@@ -68,25 +68,25 @@ $(function(){
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="phone" class="col-sm-2 control-label">*绑定手机</label>
+						<label for="phone" class="col-sm-2 control-label"><span class="redStar">*</span>绑定手机</label>
 						<div class="col-sm-9">
 							<input type="text" class="form-control" name="phone" id="phone" placeholder="请输入电话号码" value="${user.getPhone()}">
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="email" class="col-sm-2 control-label">*绑定邮箱</label>
+						<label for="email" class="col-sm-2 control-label"><span class="redStar">*</span>绑定邮箱</label>
 						<div class="col-sm-9">
 							<input type="text" class="form-control" name="email" id="email" placeholder="请输入邮箱" value="${user.getEmail()}">
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="address" class="col-sm-2 control-label">*家庭住址</label>
+						<label for="address" class="col-sm-2 control-label"><span class="redStar">*</span>家庭住址</label>
 						<div class="col-sm-9">
 							<input type="text" class="form-control" name="address" id="address" placeholder="请输入家庭住址" value="${user.getAddress()}">
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="postal" class="col-sm-2 control-label">*邮政编码</label>
+						<label for="postal" class="col-sm-2 control-label"><span class="redStar">*</span>邮政编码</label>
 						<div class="col-sm-9">
 							<input type="text" class="form-control" name="postal" id="postal" placeholder="请输入邮政编码" value="${user.getPostal()}">
 						</div>
