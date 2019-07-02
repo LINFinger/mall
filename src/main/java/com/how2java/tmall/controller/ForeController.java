@@ -182,9 +182,10 @@ public class ForeController {
      * @return
      */
     @RequestMapping("alterReceiverInfo")
-    public String receiverChange(HttpSession session,@RequestParam int id,@RequestParam String userName,@RequestParam String phone,
+    public String receiverChange(HttpSession session,@RequestParam int id,@RequestParam String phone,
                                  @RequestParam String address1,@RequestParam String address2,@RequestParam String receiver,@RequestParam String postal) {
         User user = (User)session.getAttribute("user");
+        String userName = user.getName();
         List<AccountInfo> infos = user.getReceiverInfo();
         AccountInfo receiverInfo = infos.get(id);
 
@@ -211,10 +212,11 @@ public class ForeController {
 	 * @return
 	 */
 	@RequestMapping("addReceiver")
-	public String addReceiver(HttpSession session,@RequestParam String userName,@RequestParam String phone,
+	public String addReceiver(HttpSession session,@RequestParam String phone,
 							  @RequestParam String address1,@RequestParam String address2,@RequestParam String receiver,@RequestParam String postal) {
 		User user = (User)session.getAttribute("user");
 		List<AccountInfo> receiverInfo = userService.get(user.getName());
+		String userName = user.getName();
 		AccountInfo info = new AccountInfo();
 		int id = 0;
 		info.setId(id);
