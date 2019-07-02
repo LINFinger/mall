@@ -11,8 +11,10 @@ public interface UserService {
     void update(User c);
     void reset(User c);
     void resetAccount(User c);
+    void addReceiver(AccountInfo c);
     void updateReceiver(AccountInfo c);
-    AccountInfo get(String name);
+    void deleteReceiver(AccountInfo c);
+    List<AccountInfo> get(String name);
     User get(int id);
     List<User> list();
     boolean isExist(String name);

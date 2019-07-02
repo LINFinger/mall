@@ -8,7 +8,11 @@ import java.util.List;
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 
+    int deleteReceiver(AccountInfo c);
+
     int insert(User record);
+
+    int addReceiver(AccountInfo c);
 
     int insertSelective(User record);
 
@@ -18,7 +22,7 @@ public interface UserMapper {
 
     int updateReceiver(AccountInfo record);
 
-    AccountInfo getReceiver(String name);
+    List<AccountInfo> getReceiver(String name);
 
     List<User> selectByExample(UserExample example);
 
